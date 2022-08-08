@@ -139,3 +139,13 @@ ORDER BY c.name
 /
 
 /*------------------------------------*/
+
+/*02.*/
+SELECT s.COMPANY,c.name, sum(p.qty)As total_number_of_shares, sum(p.qty*p.price)/sum(p.qty)AS Average_price_paid_by_the_client
+FROM client c , purchase p ,stock s 
+WHERE c.clno = p.clno AND s.COMPANY = p.COMPANY
+GROUP BY c.name , p.COMPANY
+ORDER BY p.COMPANY
+/
+
+/*--------------------------------------------*/
