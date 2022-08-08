@@ -169,4 +169,18 @@ WHERE c.clno = p.clno
 GROUP BY c.name
 ORDER BY c.name
 /
+
 /*--------------------------------------------------*/
+
+/*05*/
+
+SELECT c.name , SUM(p.price*p.qty)-SUM(s.price*p.qty)AS book_profit
+FROM client c , stock s , purchase p
+WHERE c.clno = p.clno AND s.company = p.company
+GROUP BY c.name
+ORDER BY c.name
+
+SELECT c.name, (SUM(s.price * p.qty) - SUM(p.qty * p.price)) 'Profit'
+FROM client c, stock s, purchase p
+WHERE c.clno = p.clno AND s.company = p.company
+GROUP BY c.name
