@@ -1,6 +1,8 @@
+/* 
 ------------------------------------------------
 / / CREATE tables 
-------------------------------------------------
+------------------------------------------------ 
+*/
 
 
 CREATE TABLE client(
@@ -39,3 +41,15 @@ CREATE TABLE purchase(
     FOREIGN KEY (clno) REFERENCES client(clno),
     FOREIGN KEY (company) REFERENCES stock(company)
 ) /
+
+/*
+------------------------------------------------
+/ / Inserting values for above tables
+------------------------------------------------
+*/
+
+INSERT INTO client VALUES ('C01','John Smith','3 East Av Bentley WA 6102')
+/
+
+INSERT INTO client VALUES ('C02','Jill Brody','42 Bent St Perth WA 6001')
+/
