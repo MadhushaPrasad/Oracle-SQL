@@ -94,3 +94,34 @@ INSERT INTO  trading VALUES ('INFOSYS','New York')
 /
 
 /*----------------------------------------------------*/
+
+INSERT INTO purchase VALUES ('C01','BHP', DATE '2001-10-02',1000,12.00)
+/
+INSERT INTO purchase VALUES('C01','BHP', DATE '2002-06-08',2000,10.50)
+/
+
+INSERT INTO purchase VALUES('C01','IBM', DATE '2000-02-12',500,58.00)
+/
+
+INSERT INTO purchase VALUES('C01','IBM', DATE '2001-04-10',1200,65.00)
+/
+
+INSERT INTO purchase VALUES('C01','INFOSYS', DATE '2001-08-11',1000,64.00)
+/
+
+INSERT INTO purchase VALUES ('C02','INTEL', DATE '2000-01-30',300,35.00)
+/
+
+INSERT INTO purchase VALUES('C02','INTEL', DATE '2001-01-30',400,54.00)
+/
+
+INSERT INTO purchase VALUES('C02','INTEL', DATE '2001-10-02',200,60.00)
+/
+
+INSERT INTO purchase VALUES('C02','FORD', DATE '1999-10-05',300,40.00)
+/
+
+INSERT INTO purchase VALUES('C02','GM', DATE '2000-12-12',500,55.50)
+/
+
+/*-------------------------------------------------------------------------*/
