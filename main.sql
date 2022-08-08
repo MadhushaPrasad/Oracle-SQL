@@ -160,3 +160,13 @@ ORDER BY s.company
 /
 
 /*-----------------------------------------------------------------*/
+
+/*04.*/
+
+SELECT c.name , SUM(p.price*p.qty) AS total_purchase_value
+FROM client c , purchase p
+WHERE c.clno = p.clno
+GROUP BY c.name
+ORDER BY c.name
+/
+/*--------------------------------------------------*/
