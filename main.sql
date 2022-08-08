@@ -149,3 +149,14 @@ ORDER BY p.COMPANY
 /
 
 /*--------------------------------------------*/
+
+/*03*/
+
+SELECT s.company , c.name, sum(p.qty*p.price) AS number_of_Sheres_held , sum(s.price*p.qty) AS current_value_of_shares
+FROM client c, stock s, purchase p , trading t
+WHERE c.clno = p.clno AND s.company = p.company AND p.company = t.company AND t.exchange = 'New York'
+GROUP BY s.company , c.name
+ORDER BY s.company
+/
+
+/*-----------------------------------------------------------------*/
