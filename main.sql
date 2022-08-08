@@ -125,3 +125,17 @@ INSERT INTO purchase VALUES('C02','GM', DATE '2000-12-12',500,55.50)
 /
 
 /*-------------------------------------------------------------------------*/
+
+/ / Querie Quections
+
+/*------------------------------------------------------------------------- */
+
+/*01.*/
+
+SELECT DISTINCT c.name,s.company,s.price,s.dividend,s.eps
+FROM client c , stock s ,purchase p
+WHERE c.clno = p.clno AND s.company = p.company  
+ORDER BY c.name
+/
+
+/*------------------------------------*/
