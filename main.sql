@@ -71,3 +71,26 @@ INSERT INTO stock VALUES ('INFOSYS',45.00,3.00,7.80)
 /
 
 /*--------------------------------------------------- */
+
+INSERT INTO  trading VALUES ('BHP','Sydney')
+/
+INSERT INTO  trading VALUES ('BHP','New York')
+/
+INSERT INTO  trading VALUES ('IBM','New York')
+/
+INSERT INTO  trading VALUES ('IBM','London')
+/
+INSERT INTO  trading VALUES ('IBM','Tokyo')
+/
+INSERT INTO  trading VALUES ('INTEL','New York')
+/
+INSERT INTO  trading VALUES ('INTEL','London')
+/
+INSERT INTO  trading VALUES ('FORD','New York')
+/
+INSERT INTO  trading VALUES ('GM','New York')
+/
+INSERT INTO  trading VALUES ('INFOSYS','New York')
+/
+
+/*----------------------------------------------------*/
