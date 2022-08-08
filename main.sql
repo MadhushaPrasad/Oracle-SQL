@@ -53,3 +53,21 @@ INSERT INTO client VALUES ('C01','John Smith','3 East Av Bentley WA 6102')
 
 INSERT INTO client VALUES ('C02','Jill Brody','42 Bent St Perth WA 6001')
 /
+
+
+/* --------------------------------------*/
+
+INSERT INTO stock VALUES ('BHP',10.50,1.50,3.20)
+/
+INSERT INTO stock VALUES ('IBM',70.00,4.25,10.00)
+/
+INSERT INTO stock VALUES ('INTEL',40.00,5.00,12.40)
+/
+INSERT INTO stock VALUES ('FORD',76.50,2.00,8.50)
+/
+INSERT INTO stock VALUES ('GM',60.00,2.50,9.20)
+/
+INSERT INTO stock VALUES ('INFOSYS',45.00,3.00,7.80)
+/
+
+/*--------------------------------------------------- */
