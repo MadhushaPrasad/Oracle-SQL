@@ -281,3 +281,24 @@ return $prod/number
 --  - May appear in the results
 --  -XML-like syntax ( <!-- This element -->)
 
+------------------------------------------------------------------------
+
+-- Clauses of a FLWOR Expression
+    -- -- for clause
+    --     iteratively binds the $prod varible to each item returned by a
+    --     path expression
+
+    -- -- let clause
+    --     binds a variable to a value
+
+    -- -- where clause
+    --     filters the items returned by the for clause
+
+    -- -- return clause
+    --     specifies the value to be returned for each item
+
+    for $prod in
+        (doc("cat.xml")//product)
+    let $prodDept := $prod/@dept
+    Where $prodDept = "ACC" or $prodDept = "WMN"
+    return $prod/name
