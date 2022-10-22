@@ -267,3 +267,17 @@ return $prod/number
 -- NUMERIC (no quotes)
 --     - doc("cat.xml")//product/@price = 10
 --     - doc("cat.xml")//item/@quntity > 1;
+
+------------------------------------------------------------------
+
+-- Comments
+
+-- Xquery comments
+-- - Delimited by (: and :)
+-- - Anywhere insignificant whitespace is allowed
+-- - Do not appear in the results
+
+-- Xml comments
+--  - May appear in the results
+--  -XML-like syntax ( <!-- This element -->)
+
