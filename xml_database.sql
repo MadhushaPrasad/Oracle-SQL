@@ -217,6 +217,9 @@ INSERT INTO adminUsers VALUES(3,
     SELECT id,xDoc.query('/catalog/product/'); -- -> gives all products
     SELECT id,xDoc.query('//product'); -- -> go to the root and give all products since down of root products are there
 
+-- get second data of SELECT BARS inside the bars
+    SELECT id,xDoc.query('/BARS/BAR[2]');
+
 /*same code in the xql Database*/
 SELECT id,xDoc.query('/*/doc[@id="123"]') FROM adminUsers;
 
