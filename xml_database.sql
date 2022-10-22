@@ -153,6 +153,63 @@ INSERT INTO adminUsers VALUES(3,
 -- name attributes of immediate
 -- subelements of the BARS element.
 
+-------------------------------------------------------------------------------------------------
+
+-- Axes
+
+-- In general, path expressions allow us to
+-- start at the root and execute steps to find a
+-- sequence of nodes at each step.
+
+-- At each step, we may follow any one of
+-- several axes
+
+/child::BAR[@name=“JoesBar"]
+
+-- Axis -> child
+-- Node test -> BAR
+-- Predicate -> [@name=“JoesBar"]
+
+-- 1.The axis (Optional)
+--     -Direction to navigate
+-- 2.The node test
+--     -The node of interest by name
+-- 3.Predicate
+--     -The criteria used to filter nodes
+
+    -- /BARS/BEER is really shorter way for
+    -- /BARS/child::BEER
+
+-- @ is really shorthand for the attribute:: axis.
+
+    -- Thus, /BARS/BEER[@name = “Bud” ] is
+    -- shorthand for
+    -- /BARS/BEER[attribute::name = “Bud”]
+
+-- More Axes
+
+    -- Some other useful axes are:
+
+        -- parent:: = parent(s) of the current node(s).
+
+        -- descendant or self:: = the current node(s)
+        -- and all descendants.
+        -- Note: // is really shorthand for this axis.
+
+        -- ancestor::, ancestor or self, etc.
+
+        -- the default axis is child:: go to all the
+        -- children of the current set of nodes.
+
+-------------------------------------------------------------
+
+-- Predicates
+
+    -- A condition inside […] may follow a tag.
+
+    -- If so, then only paths that have that tag and
+    -- also satisfy the condition are included in the
+    -- result of a path expression.
 
 /*same code in the xql Database*/
 SELECT id,xDoc.query('/*/doc[@id="123"]') FROM adminUsers;
