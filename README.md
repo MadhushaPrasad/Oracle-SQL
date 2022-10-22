@@ -1,5 +1,7 @@
 # Oracle-SQL
 
+[![1-BFTWWQO8gd-Rb6ah-N0-Gdbp-A.png](https://i.postimg.cc/Y9dgZrYk/1-BFTWWQO8gd-Rb6ah-N0-Gdbp-A.png)](https://postimg.cc/34DdDHtb)
+
 Oracle SQL Developer is an Integrated development environment for working with SQL in Oracle databases.
 
 ### Year 3 semester 1 DS module Worksheets
@@ -18,3 +20,27 @@ LiveSQL is also an excellent resource for getting started with Oracle Database.
 
 ## Dev Gym
 If you would like to challenge yourself, you can take quizzes, workouts and classes at [DevGym.oracle.com](https://devgym.oracle.com)
+
+#### Basic SQL syntax
+
+We are here using basic SQL syntax to show how our DB works.<br>
+
+```r
+CREATE TABLE students 
+  ( 
+     contact_id     NUMBER(10) NOT NULL, 
+     last_name      VARCHAR2(50) NOT NULL, 
+     first_name     VARCHAR2(50) NOT NULL, 
+     address        VARCHAR2(50), 
+     city           VARCHAR2(50), 
+     uni_assignment VARCHAR2(50), 
+     CONSTRAINT students_pk PRIMARY KEY (contact_id) 
+  ); 
+```
+
+[![isaac-arnault-oracle.png](https://i.postimg.cc/4xDshmyF/isaac-arnault-oracle.png)](https://postimg.cc/Hr9fqWQQ)
+
+
+You can create and provision tables in Oracle DB using PL/SQL syntax for more advanced needs.<br>
+
+If you enjoyed this gist, feel free to fork and share it! Thanks.
