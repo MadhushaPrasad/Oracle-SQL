@@ -211,6 +211,12 @@ INSERT INTO adminUsers VALUES(3,
     -- also satisfy the condition are included in the
     -- result of a path expression.
 
+-- Example: /using Query() method
+
+-- simple path expression
+    SELECT id,xDoc.query('/catalog/product/'); -- -> gives all products
+    SELECT id,xDoc.query('//product'); -- -> go to the root and give all products since down of root products are there
+
 /*same code in the xql Database*/
 SELECT id,xDoc.query('/*/doc[@id="123"]') FROM adminUsers;
 
