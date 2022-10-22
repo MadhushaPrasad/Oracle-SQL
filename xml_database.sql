@@ -130,6 +130,30 @@ INSERT INTO adminUsers VALUES(3,
 -- and BEER elements, such
 -- as these.
 
+--------------------------------------------------------------------
+
+-- 
+
+-- In XPath, we refer to attributes by prepending ' @ ' to their
+
+-- Attributes of a tag may appear in paths as if
+-- they were nested within that tag.
+
+
+-- Example: /BARS/*/@name
+<BARS>
+    <BAR name = “JoesBar”>
+        <PRICE theBeer = “Bud”>2.50</PRICE>
+        <PRICE theBeer = “Miller”>3.00</PRICE>
+    </BAR>
+    <BEER name = “Bud” soldBy = “JoesBar SuesBar”/>
+</BARS>
+
+-- /BARS/*/@name selects all
+-- name attributes of immediate
+-- subelements of the BARS element.
+
+
 /*same code in the xql Database*/
 SELECT id,xDoc.query('/*/doc[@id="123"]') FROM adminUsers;
 
