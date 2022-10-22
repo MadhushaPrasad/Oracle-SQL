@@ -220,6 +220,21 @@ INSERT INTO adminUsers VALUES(3,
 -- get second data of SELECT BARS inside the bars
     SELECT id,xDoc.query('/BARS/BAR[2]');
 
+-- Example: Predicates and Returned
+-- Elements
+
+-- Using number in a predicate does not mean that number
+-- elements are returned:
+-- all price elements whose grater than 2.50
+SELECT id,xDoc.query('/BARS/BAR/PRICE[.>2.50]');
+
+-- all price elements whose less than 2.50
+SELECT id,xDoc.query('/BARS/BAR/PRICE[.< 2.50]');
+
+SELECT id,xDoc.query('/BARS/BAR[. lt 2.00]') FROM adminUsers;
+
+-- A period (".") is used to indicate the context item itself
+
 /*same code in the xql Database*/
 SELECT id,xDoc.query('/*/doc[@id="123"]') FROM adminUsers;
 
@@ -230,3 +245,4 @@ SELECT id,xDoc.query('/*/child::doc[attribute::id="123"]') FROM adminUsers;
 SELECT id,xDoc.query('//doc[@id="123"]') FROM adminUsers;
 
 SELECT id,xDoc.query('descendant-or-self::doc[attribute::id="123"]') FROM adminUsers;
+
