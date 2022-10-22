@@ -201,7 +201,7 @@ INSERT INTO adminUsers VALUES(3,
         -- the default axis is child:: go to all the
         -- children of the current set of nodes.
 
--------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 -- Predicates
 
@@ -219,6 +219,8 @@ INSERT INTO adminUsers VALUES(3,
 
 -- get second data of SELECT BARS inside the bars
     SELECT id,xDoc.query('/BARS/BAR[2]');
+    
+-------------------------------------------------------------------------------------------------------
 
 -- Example: Predicates and Returned
 -- Elements
@@ -246,3 +248,22 @@ SELECT id,xDoc.query('//doc[@id="123"]') FROM adminUsers;
 
 SELECT id,xDoc.query('descendant-or-self::doc[attribute::id="123"]') FROM adminUsers;
 
+-------------------------------------------------------------------------------------------------------
+
+-- XQuery
+
+-- XQuery extends XPath to a query language that has
+-- power similar to SQL.
+
+-- Variables are identified by a name preceded by a $
+
+for $prod in
+    (doc("cat.xml")//product)
+return $prod/number
+
+-- Literal values can be expressed as:
+-- STRING (in single oe double quotes)
+--     - doc("cat.xml")//product/@dept = "WMN"
+-- NUMERIC (no quotes)
+--     - doc("cat.xml")//product/@price = 10
+--     - doc("cat.xml")//item/@quntity > 1;
