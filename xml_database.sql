@@ -15,14 +15,13 @@
 -- XML Schema
 -- Relax NG
 
-
-/*CREATE TABLE adminUsers(
+CREATE TABLE adminUsers(
 	id int NOT NULL PRIMARY KEY,
 	xDoc Xml NOT NULL
-);*/
+);
 
 
-/*INSERT INTO adminUsers VALUES(5,
+INSERT INTO adminUsers VALUES(5,
 	'<catalog>
 		<product dept="WN">
 			<number>555</number>
@@ -31,12 +30,11 @@
 		<doc>
 			<title>hello</title>
 		</doc>
-	</catalog>
-	');*/
+	</catalog>');
 
-	/*SELECT * FROM adminUsers;*/
+SELECT * FROM adminUsers;
 
-/*INSERT INTO adminUsers VALUES(3,
+INSERT INTO adminUsers VALUES(3,
 	'
 	<doc>
 	<doc id="123">
@@ -54,7 +52,48 @@
 	</doc>
 	</doc>
 	'
-);*/
+);
+
+
+-- path expression
+-- Simple path descriptors are sequences of
+-- tags separated by slashes (/).
+
+-- If the descriptor begins with /, then the path
+-- starts at the root and has those tags, in order.
+
+-- If the descriptor begins with //, then the path
+-- can start anywhere.
+
+-- Value of a Path Descriptor
+
+-- Each path descriptor, applied to a
+-- document, has a value that is a sequence of
+-- elements.
+
+-- An element is an atomic value or a node.
+
+-- A node is matching tags and everything in
+-- between.
+
+
+-- Example 01: /BARS/BAR/PRICE
+<BARS>
+    <BAR name = “JoesBar”>
+            <PRICE theBeer = “Bud”>2.50</PRICE>
+            <PRICE theBeer = “Miller”>3.00</PRICE>
+    </BAR>
+    <BEER name = “Bud” soldBy = “JoesBar
+    SuesBar/>
+</BARS>
+
+    -- /BARS/BAR/PRICE describes the
+    --     set with these two PRICE elements
+    --     as well as the PRICE elements for
+    --     any other bars.
+
+
+
 
 
 /*same code in the xql Database*/
