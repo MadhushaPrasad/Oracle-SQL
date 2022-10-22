@@ -94,7 +94,19 @@ INSERT INTO adminUsers VALUES(3,
 
 
 
+-- Example 02: //PRICE
+    <BARS>
+        <BAR name = “JoesBar”>
+            <PRICE theBeer = “Bud”>2.50</PRICE>
+            <PRICE theBeer = “Miller”>3.00</PRICE>
+        </BAR>
+        <BEER name = “Bud” soldBy = “JoesBar
+        SuesBar …”/>
+    </BARS>
 
+-- //PRICE describes the PRICE
+-- Elements to appear within
+-- the document.
 
 /*same code in the xql Database*/
 SELECT id,xDoc.query('/*/doc[@id="123"]') FROM adminUsers;
