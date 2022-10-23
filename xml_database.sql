@@ -335,3 +335,20 @@ SELECT xDoc.query(
 	return $a
 	'
 ) FROM adminUsers;
+
+SELECT xDoc.query(
+	'for $prod in //BARS
+	let $a:=$prod//PRICE
+	where $a > 2.50
+	return (<item>{data($a)}</item>)
+	'
+) FROM adminUsers;
+
+SELECT xDoc.query(
+	'for $prod in //BARS
+	let $a:=$prod//PRICE
+	return if ($a > 2.50)
+		then <book>{data($a)}</book>
+		else <paper>{data($a)}</paper>
+	'
+) FROM adminUsers;
