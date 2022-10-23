@@ -302,3 +302,36 @@ return $prod/number
     let $prodDept := $prod/@dept
     Where $prodDept = "ACC" or $prodDept = "WMN"
     return $prod/name
+
+
+SELECT xDoc.query(
+	'for $prod in //product
+	let $a:= $prod//number
+	return $a
+	'
+) FROM adminUsers WHERE id=1;
+
+SELECT xDoc.query(
+	'for $prod in //BARS
+	let $a:=$prod//PRICE
+	where $a > 2.50
+	return $a
+	'
+) FROM adminUsers;
+
+SELECT xDoc.query(
+	'for $prod in //BARS
+	let $a:=$prod//PRICE
+	where $a > 2.50
+	return (<item>{$a}</item>)
+	'
+) FROM adminUsers;
+
+
+SELECT xDoc.query(
+	'for $prod in //BARS
+	let $a:=$prod//PRICE
+	where $a > 2.50
+	return $a
+	'
+) FROM adminUsers;
